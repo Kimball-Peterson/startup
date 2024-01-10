@@ -1,4 +1,4 @@
 [read me](https://github.com/Kimball-Peterson/startup/blob/main/README.md)
-*NOTES* /n
-**Git Notes**/n
+*NOTES* 
+**Git Notes**
 ***- Git is useful. Use it.***
