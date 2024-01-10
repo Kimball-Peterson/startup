@@ -1,4 +1,5 @@
 Text added to file
 Git add practice
 
-This will 
+This will make conflict
+Fixed
