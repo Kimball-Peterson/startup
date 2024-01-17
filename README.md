@@ -19,7 +19,7 @@ App will include the following:
 
 ## Mockup Images
 ### Homepage 
-Inlcudes clean design, mimicking  high end automotive, luxury item branding.
+Will inlcude clean design, most likely dark color pallette, smooth transitions, mimicking  high end automotive, luxury item branding.
 
 <img width="1283" alt="Screenshot 2024-01-16 at 7 59 16 PM" src="https://github.com/Kimball-Peterson/startup/assets/95988244/8e192191-f705-47bd-abab-a0a7d71755e1">
 
