@@ -16,3 +16,12 @@ App will include the following:
 **Authentication**: Users will need an account to interact with listed items or to post items. Like, comment on, view more than a certain number and will be prompted to create an account to continue.
 **Database data**: Store data about interaction, prices, interaction effect on interest in items.
 **WebSocket data**: Comments and likes will be realtime data passed between each users view of the pages. A message platform might be a far out dream but would create a full service sales platform. A tally of sales and influence of platforms features on sale kept to market platform.
+
+## Mockup Images
+### Homepage 
+Inlcudes clean design, mimicking  high end automotive, luxury item branding.
+
+<img width="1283" alt="Screenshot 2024-01-16 at 7 59 16 PM" src="https://github.com/Kimball-Peterson/startup/assets/95988244/8e192191-f705-47bd-abab-a0a7d71755e1">
+
+<img width="1263" alt="Screenshot 2024-01-16 at 7 59 26 PM" src="https://github.com/Kimball-Peterson/startup/assets/95988244/2893c089-6815-4818-b99f-206b6e17b65f">
+
