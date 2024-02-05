@@ -39,6 +39,15 @@
 			- Selector\
    			- One or more declarations that represent the property to style with the given property value.\
       			- (selector) {}\
-	 	- 
+	 	- CSS -> HTML connection\
+   			- Inline\
+      				- <p style=“color: green”> CSS</p>\
+	  		- Style Element\
+     				- <style></style>\
+	 		- Link to stylesheet\
+    				- <link rel="stylesheet" href="styles.css/>\
+			- Box Model\
+   				- Everything is defined as boxes in CSS\
+       				- When style is applied it is applies to a region of display that is a box\
 	 
 	 
