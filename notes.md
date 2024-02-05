@@ -29,7 +29,7 @@
 		- HTML media elements: img, audio, video, svg and canvas.\
   		- Svg and canvas both contain code to render a visual image (even animated)\
     		- Media tags that reverence external media all take URL as attribute.\
-      			- Can be relative or full path.\\
+      			- Can be relative or full path.\
 	 
 **CSS**\
 		- Cascading Style Sheets\
@@ -38,7 +38,7 @@
       		- Rules comprised of:\
 			- Selector\
    			- One or more declarations that represent the property to style with the given property value.\
-      			- (selector) {}\
+      			- (selector) {}\  
 	 	- CSS -> HTML connection\
    			- Inline\
       				- <p style=“color: green”> CSS</p>\
