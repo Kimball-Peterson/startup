@@ -9,7 +9,7 @@
 	-	Elastic IP allows me to stop the instance if I want to without having a new public IP assigned.\
 	-	Server size t3.nano should be adequate (I am using t2)\\
  
-**HTTP, HTTPS, TLS**\\
+**HTTP, HTTPS, TLS**\
 	- HTTP - Hypertext Transport Protocol, non-secure connection, all data sent can be accessed by anyone in the chain of 	computers used to send info.\ 
  	- HTTPS - Secure Hypertext Transport Protocol - Establish a secure connection before any data is exchanged. All data 	encrypted using TLS Protocol.\\
   	- TLS Protocol:  
