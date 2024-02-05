@@ -1,7 +1,7 @@
 [read me](https://github.com/Kimball-Peterson/startup/blob/main/README.md) \\
-*NOTES*\
-**Git Notes**\
-***- Git is useful. Use it.***\
+*NOTES*
+**Git Notes**
+***- Git is useful. Use it.***
 
 **EC2**\\
 *** -	EC2 instance is remote access to running machine in different location (N. Virginia in my case)\
