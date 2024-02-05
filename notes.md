@@ -12,13 +12,11 @@
 **HTTP, HTTPS, TLS**\\
 	- HTTP - Hypertext Transport Protocol, non-secure connection, all data sent can be accessed by anyone in the chain of 	computers used to send info.\ 
  	- HTTPS - Secure Hypertext Transport Protocol - Establish a secure connection before any data is exchanged. All data 	encrypted using TLS Protocol.\\
-  
-  	- TLS Protocol:
+  	- TLS Protocol:  
    		- Authentication:  lets each party to the communication verify that the other party is who they claim to be.\
      		- Encryption: Data is encrypted while being transmitted between the user agent and the server, in order to 		prevent it from being read and interpreted by unauthorized parties.\
-       		- Integrity: TLS ensures that between encrypting, transmitting, and decrypting the data, no information is 		lost, damaged, tampered with, or falsified.\\ 
-	 
-	- Let's Encrypt and Certificates
+       		- Integrity: TLS ensures that between encrypting, transmitting, and decrypting the data, no information is 		lost, damaged, tampered with, or falsified.\\   
+	- Let's Encrypt and Certificates\
  		- Started by two Mozilla employees, nonprofit seeking to renew web certificates for free.\
    		- Use a service like Let’s Encrypt and IETF standard ACME protocol. Anyone who owns domain name can generate 		and renew certificates for free.\
      		- Modern browsers expect exclusively HTTPS.\
