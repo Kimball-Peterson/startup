@@ -25,3 +25,10 @@ Will inlcude clean design, most likely dark color pallette, smooth transitions, 
 
 <img width="1263" alt="Screenshot 2024-01-16 at 7 59 26 PM" src="https://github.com/Kimball-Peterson/startup/assets/95988244/2893c089-6815-4818-b99f-206b6e17b65f">
 
+
+## Deliverable 
+### First Deliverable 
+Added HTML for all main pages. Included placeholders for: 
+- Car info, Classifieds Page: Database info will be included in dropdown for car make and model, or offer option to list as something custom.
+- Media Section, Media Page: Videos, Photos, Gallery Style, Cards, but in a list. Videos pulled from outside platforms.
+- Reads page: Includes space for stories, written to differentiate from other sections.
