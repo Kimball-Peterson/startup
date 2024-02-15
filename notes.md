@@ -77,7 +77,21 @@ console.log(a.length);
 	filter:	Run a function to remove items				a.filter(i => i%2)  
 	every:	Run a function to test if all items match		a.every(i => i < 3)  
 	some:	Run a function to test if any items match		a.some(i => 1 < 1)  
-	
+
+ ```javascript
+const a = [1, 2, 3];
+
+console.log(a.map((i) => i + i));
+// OUTPUT: [2,4,6]
+console.log(a.reduce((v1, v2) => v1 + v2));
+// OUTPUT: 6
+console.log(a.sort((v1, v2) => v2 - v1));
+// OUTPUT: [3,2,1]
+
+a.push(4);
+console.log(a.length);
+// OUTPUT: 4
+```
 	    
 
 	 
