@@ -28,12 +28,12 @@ Will inlcude clean design, most likely dark color pallette, smooth transitions, 
 
 ## Deliverable 
 ### First Deliverable 
-20% HTML pages for each component of your application - Added index, reads, media, classifieds, reads(article1)
-10% Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER - Used throughout.
-10% Links between pages as necessary - Nav bar allows for travel between pages.
-10% Application textual content - In process. Example reads article (separate page for each story, tile in website.)
-10% Placeholder for 3rd party service calls - 3rd Party Social Buttons service.
-10% Application images - STELLARLC photo, add a mock photo for classifieds, media page.
-10% Login placeholder, including user name display - Placeholder in top right
-10% Database data placeholder showing content stored in the database - Car dropdown available as info from database in the classifieds section.
-10% WebSocket data placeholder showing where realtime communication will go - Websocket for comments on reads articles, media posts, and classifieds posts.
+-20% HTML pages for each component of your application - Added index, reads, media, classifieds, reads(article1)
+-10% Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER - Used throughout.
+-10% Links between pages as necessary - Nav bar allows for travel between pages.
+-10% Application textual content - In process. Example reads article (separate page for each story, tile in website.)
+-10% Placeholder for 3rd party service calls - 3rd Party Social Buttons service.
+-10% Application images - STELLARLC photo, add a mock photo for classifieds, media page.
+-10% Login placeholder, including user name display - Placeholder in top right
+-10% Database data placeholder showing content stored in the database - Car dropdown available as info from database in the classifieds section.
+-10% WebSocket data placeholder showing where realtime communication will go - Websocket for comments on reads articles, media posts, and classifieds posts.
