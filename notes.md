@@ -48,6 +48,10 @@
     				- <link rel="stylesheet" href="styles.css/>\
 			- Box Model\
    				- Everything is defined as boxes in CSS\
-       				- When style is applied it is applies to a region of display that is a box\
+       				- When style is applied it is applies to a region of display that is a box.  
+	   	> Frameworks 
+     			> Tailwind - New fromeowrk as of 4 years. 46% general usage, 78% retention. Uses smaller definitions 				that are applied specifically to individual HTML elements. Moves a large amount of CSS into 				HTML file directly.
+			> Bootstrap is the champion for frameworks. Has been supported and active for a decade now. Defines 				defacto look and feel of most websites. Great for user experience continuity. Difficult to 				grab attention because a tad mundane.
+   			> 
 	 
 	 
