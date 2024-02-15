@@ -37,3 +37,8 @@ Will inlcude clean design, most likely dark color pallette, smooth transitions, 
 -10% Login placeholder, including user name display - Placeholder in top right
 -10% Database data placeholder showing content stored in the database - Car dropdown available as info from database in the classifieds section.
 -10% WebSocket data placeholder showing where realtime communication will go - Websocket for comments on reads articles, media posts, and classifieds posts.
+
+## Update 02/14
+- Added new tiles to media tab to standardize look and sizing of image(add flex in future) 
+- Added new tabs for reads and created "template" of sorts for future reads articles.
+- New text for homepage and prepared everything for CSS
