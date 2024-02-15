@@ -60,7 +60,8 @@ const a = [1,2,3];
 console.log(a[1]);
 // OUTPUT: 2
 console.log(a.length);
-// OUTPUT: 3 ```
+// OUTPUT: 3 
+```
 
 - **Functions:**
 push	Add an item to the end of the array	a.push(4)
