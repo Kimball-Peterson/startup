@@ -63,7 +63,8 @@ console.log(a.length);
 // OUTPUT: 3 
 ```
 
-- **Functions:**  
+- **Functions:**
+ 
 push:	Add an item to the end of the array	a.push(4)  
 pop:	Remove an item from the end of the array	x = a.pop()  
 slice:	Return a sub-array	a.slice(1,-1)  
