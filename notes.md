@@ -64,7 +64,7 @@ console.log(a.length);
 ```
 
 - **Functions:**
-push	Add an item to the end of the array	a.push(4)
+push	Add an item to the end of the array	a.push(4)  
 pop	Remove an item from the end of the array	x = a.pop()
 slice	Return a sub-array	a.slice(1,-1)
 sort	Run a function to sort an array in place	a.sort((a,b) => b-a)
