@@ -48,6 +48,31 @@
 - **Box Model:**
   - Everything is defined as boxes in CSS.
   - When style is applied it is applied to a region of display that is a box.
+- **Selectors:**
+  - Element Type Selector: uses html element as selector. `body {font-family: sans-serif;}`  
+  - Combinators: Descendant Combinators, can be used to target all siblings of something. Ex. `section h2 { color: 		#004400;}`  
+    which targets all h2 elements that are within a section block.  
+  - Class Selectors: All elements can have zero or more classifications applied to them. If a class summary exists, `.summary { font-weight: bold; } ` targets all with the summary class. Can be combined with class selectors ex. `p.summary { font-weight: bold; }`  
+  - ID Selectors: reference the ID of an element. All IDs should be unique within an html document. Prefix the ID with a hash symbol (#). Ex. `#physics { border-left: solid 1em purple; }`  
+  - Attribute Selector: select elements based on attributes. `p[class='summary'] { color: red; } `  
+  - Pseudo Selector: select based on positional relationships, mouse interactions, hyperlink visitation states, and attributes. Ex. purple highlight bar that appears only when mouse hovers over text ` section:hover { border-left: solid 1em purple; }`  
+  - CSS Declarations: rule declarations specify a property and value to assign when rule selector matches one or more elements. https://github.com/webprogramming260/.github/blob/main/profile/css/declarations/declarations.md  
+  	- Units: abosolute ( px, in) Relative units (% or parent element, % or minimum viewport dimension (25vmin), or multiplier of size of letter m (1.5rem, em is parents font, rem is root font))  
+    - Color: keywords (ex.red)  
+    	- RGB hex (#00FFAA22 or #0FA2): Red green blue as hexadecimal with optional alpha opacity  
+     	- RGB Function (128, 255, 128, 0.5): Red green blue as percentage or number between 0 and 255, with optional alpha opacity percentage.  
+        - HSL (hsl(180, 30%, 90%, 0.5): Hue saturation light and optional opacity. Hue is position on 365 degree color wheel(red is 0 and 255). Saturation is how gray color is, light is how bright.  
+  - Fonts: Use this: `@import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');`  
+- **Responsive:**
+	- Viewport tag: `<meta name="viewport" content="width=device-width,initial-scale=1" />` always inlcude for viewport browser settings bypass
+	- Float: moves an element to the right or left of its container element and allows inline elements to wrap around it.
+ 	- Media Queries: Dynamically detects size and orientation of device and applies css rules to represent the html in a way that accomodates the change. `@media (orientation: portrait) {
+  div {
+    transform: rotate(270deg);
+  }
+}`
+		- Takes one or more predicates separated by boolean operators.
+   
 
 ### Frameworks
 - **Tailwind:** New framework as of 4 years ago. 46% general usage, 78% retention. Uses smaller definitions that are applied specifically to individual HTML elements. Moves a large amount of CSS into the HTML file directly.
