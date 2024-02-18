@@ -88,7 +88,13 @@ body {
     background-color: #383838;
   }
   
+  ._title {
+    padding-top: 10px;
+  }
  
+  .reads_p{
+    padding: 10px;
+  }
   * {
     padding: 0;
     margin: 0;
