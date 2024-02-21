@@ -50,4 +50,11 @@ Will inlcude clean design, most likely dark color pallette, smooth transitions, 
 
 ## Deliverable
 ### Second Deliverable 
+Properly styled CSS - Dark colors, new fonts, better spacing, separation added.
+30% Header, footer, and main content body - Styled and responsive.
+20% Navigation elements - All lead to working links nav is responsive
+10% Responsive to window resizing - All elements
+20% Application elements 
+10% Application text content - Content spread through a number of pages.
+10% Application images - All responsive and formatted for site.
 
