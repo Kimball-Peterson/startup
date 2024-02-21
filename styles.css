@@ -8,7 +8,9 @@ title {
     font-size: 45px;
     font-display: flex;
 }
-
+h1 {
+    padding-bottom: 10px;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -20,6 +22,8 @@ body {
 .login_overall {
     width: auto;
     height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .responsive {
     width: 100%;
