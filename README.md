@@ -28,17 +28,33 @@ Will inlcude clean design, most likely dark color pallette, smooth transitions, 
 
 ## Deliverable 
 ### First Deliverable 
--20% HTML pages for each component of your application - Added index, reads, media, classifieds, reads(article1)
--10% Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER - Used throughout.
--10% Links between pages as necessary - Nav bar allows for travel between pages.
--10% Application textual content - In process. Example reads article (separate page for each story, tile in website.)
--10% Placeholder for 3rd party service calls - 3rd Party Social Buttons service.
--10% Application images - STELLARLC photo, add a mock photo for classifieds, media page.
--10% Login placeholder, including user name display - Placeholder in top right
--10% Database data placeholder showing content stored in the database - Car dropdown available as info from database in the classifieds section.
--10% WebSocket data placeholder showing where realtime communication will go - Websocket for comments on reads articles, media posts, and classifieds posts.
+-20% HTML pages for each component of your application - Added index, reads, media, classifieds, reads(article1)  
+-10% Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER - Used throughout.  
+-10% Links between pages as necessary - Nav bar allows for travel between pages.  
+-10% Application textual content - In process. Example reads article (separate page for each story, tile in website.)  
+-10% Placeholder for 3rd party service calls - 3rd Party Social Buttons service.  
+-10% Application images - STELLARLC photo, add a mock photo for classifieds, media page.  
+-10% Login placeholder, including user name display - Placeholder in top right  
+-10% Database data placeholder showing content stored in the database - Car dropdown available as info from database in the classifieds section.  
+-10% WebSocket data placeholder showing where realtime communication will go - Websocket for comments on reads articles, media posts, and classifieds posts.  
 
 ## Update 02/14
-- Added new tiles to media tab to standardize look and sizing of image(add flex in future) 
-- Added new tabs for reads and created "template" of sorts for future reads articles.
-- New text for homepage and prepared everything for CSS
+- Added new tiles to media tab to standardize look and sizing of image(add flex in future)   
+- Added new tabs for reads and created "template" of sorts for future reads articles.  
+- New text for homepage and prepared everything for CSS  
+
+## Updates 02/14 - 02/20 
+- Added responisive design to images, body.  
+- Added a few more images.  
+- New text and images in reads tab, better sizing for images throughout.  
+
+## Deliverable  
+### Second Deliverable  
+Properly styled CSS - Dark colors, new fonts, better spacing, separation added.  
+30% Header, footer, and main content body - Styled and responsive.  
+20% Navigation elements - All lead to working links nav is responsive  
+10% Responsive to window resizing - All elements  
+20% Application elements  
+10% Application text content - Content spread through a number of pages.  
+10% Application images - All responsive and formatted for site.  
+
