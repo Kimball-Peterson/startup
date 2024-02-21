@@ -92,7 +92,12 @@ body {
     padding-top: 10px;
   }
  
+
   .reads_p{
+    padding: 10px;
+  }
+
+  .reads_tile {
     padding: 10px;
   }
   * {
