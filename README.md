@@ -42,3 +42,12 @@ Will inlcude clean design, most likely dark color pallette, smooth transitions, 
 - Added new tiles to media tab to standardize look and sizing of image(add flex in future) 
 - Added new tabs for reads and created "template" of sorts for future reads articles.
 - New text for homepage and prepared everything for CSS
+
+## Updates 02/14 - 02/20 
+- Added responisive design to images, body.
+- Added a few more images.
+- New text and images in reads tab, better sizing for images throughout.
+
+## Deliverable
+### Second Deliverable 
+
