@@ -17,10 +17,10 @@ body {
     padding: 15px;
   }
 
-/*.RS6 {
-    border: 10em;
-    border-color: white;
-}*/
+.responsive {
+    width: 100%;
+    height: auto;
+  }
 
 .row {
     padding-top: 25px;
