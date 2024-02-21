@@ -17,6 +17,10 @@ body {
     padding: 15px;
   }
 
+.login_overall {
+    width: auto;
+    height: auto;
+}
 .responsive {
     width: 100%;
     height: auto;
