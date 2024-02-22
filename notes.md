@@ -117,6 +117,32 @@ a.push(4);
 console.log(a.length);
 // OUTPUT: 4
 ```
+- **DOM:** Document Object Model is object representation of HTML elements that browser uses to render the display. Browser exposes the DOM to external codes to allow you to write programs that dynamically manipulate HTML.  
+	- Access to DOM through global variable name `document`  
+ 	- There is a node in the DOM for everything in an HTML doc. All form a tree with a document node at top.  
+  	- DOM Element Interface: Every element in an HTML doc implements the DOM Element Interface, which is derived from 	DOM Node interface. DOM Element interface provides the means for iterating child elements, accessing parent element, 	and changing element's attributes.
+  	- ```javascript
+  	  function displayElement(el) {
+  		console.log(el.tagName);
+ 		for (const child of el.children) {
+    		  displayElement(child);
+  		}
+	  }
+
+	  displayElement(document);```
+
+  	- CSS selector can be provided to `querySelectorAll` function to select elements from the doc.  
+  		- `textContent` property contrains all of element's text.  
+  	 	- innerHTML accesses textual representation of an element's HTML  
+  	  	- ```javascript
+  	  	  const listElements = document.querySelectorAll('p');
+		  for (const el of listElements) {
+  		  console.log(el.textContent);
+		  }
+    		```
+  	  	- 
+		
+  	  
 	    
 
 	 
