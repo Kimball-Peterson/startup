@@ -139,9 +139,60 @@ console.log(a.length);
 		  for (const el of listElements) {
   		  console.log(el.textContent);
 		  }
-    		```
-  	  	- 
-		
+    		```  
+  	- Modifying the DOM  
+  		- DOM supports ability to insert, modify, delete elements in the DOM.
+  	  		- To create element, first create element on DOM document.
+  	    		- Insert the new element into DOM tree by appending to an existing element in tree
+  	     	- ```javascript
+  	          function insertChild(parentSelector, text) {
+  		    	const newChild = document.createElement('div');
+  		    	newChild.textContent = text;
+
+  		    	const parentElement = document.querySelector(parentSelector);
+  		    	parentElement.appendChild(newChild);
+  	        	}
+				insertChild('#courses', 'new course');
+		  ```
+
+  	  	- To delete: call `removeChild` function on parent element
+  	   		```javascript
+  	     		function deleteElement(elementSelector) {
+  				const el = document.querySelector(elementSelector);
+  				el.parentElement.removeChild(el);
+			}
+
+			deleteElement('#courses div');  
+  	     		```
+  	  - Injecting HTML: DOM allows entire blocks of HTML to be injected into an element.  
+		```javascript
+		const el = document.querySelector('div');
+		el.innerHTML = '<div class="injected"><b>Hello</b>!</div>';
+		```  
+		- Directly injected HTML as a block of text is a common attack vector for hackers.   
+		- IF JAVASCRIPT CAN BE INJECTED ANYWHERE IN YOUR APPLCATION THEN THAT JAVASCRIPT CAN REPRESENT 				  ITSELF AS THE CURRENT USER OF THE APPLICATION.  
+		- Make sure all injected HTML cannot be manipulated by a user.  
+		- Common injection paths: HTML input controls, URL parameters, and HTTP headers.  
+		- Either sanitize any HTML that contains variables, or simply use DOM manipulation functions instead 			  of `innerHTML`
+  	    
+  	  - Event Listeners: All DOM elemenets support ability to attach a function that gets called when an event occurs on 	    the element.  
+  	  	- ``` javascript
+  	     		const submitDataEl = document.querySelector('#submitData');
+			submitDataEl.addEventListener('click', function (event) {
+  				console.log(event.type);
+			});
+  	     	```
+  	      	- EL can also be added directly in HTML `onclick`:  
+  	      	- ```<button onclick='alert("clicked")'>click me</button>```  
+  
+  	     
+  	  	   
+  	
+  
+  	     
+  	       	
+  	    	     
+			
   	  
 	    
 
