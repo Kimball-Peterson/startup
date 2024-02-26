@@ -231,7 +231,9 @@ console.log(a.length);
 	// OUTPUT:
 	//    Coin toss result: tails
 	//    Toss completed  
-```
+	```
+  
+
 
 
 
