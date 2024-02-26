@@ -232,7 +232,14 @@ console.log(a.length);
 	//    Coin toss result: tails
 	//    Toss completed  
 	```
-  
+**JavaScript Async/await**  
+- Better for large systems, more concise representation.
+- `await`: keyword that wraps execution of a promise and removes the need to chain functions. Expression will block until the promise state moves to `fulfilled` or throws an exception if state moves to `rejected`  
+- Cannot call `await` unless it is called at top level of the JavaScript, or is in a function defined with `async` keyword.  - `async` transforms the function to return a promise that will resolve to the value previously returned.  
+  - Basically turns any function into an asynchronous function so that it can make asynchronous requests.
+
+- `await` wraps a call to the `async`function, blocks execution until the promise has resolved and returns the promise result.
+- 
 
 
 
