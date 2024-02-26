@@ -198,7 +198,7 @@ console.log(a.length);
 - Promise executor takes two functions as parameters, `resolve`and `reject`
 	- `resolve`: sets promise to `fulfilled` state
  	- `reject` : sets promise to `rejected` state
- 	-  ```javascript
+ ```javascript
      const coinToss = new Promise((resolve, reject) => {
   setTimeout(() => {
     if (Math.random() > 0.5) {
@@ -207,7 +207,10 @@ console.log(a.length);
       reject('error');
     }
   }, 10000);
- });```
+ }); ```
+
+
+
 
   	     
   	  	   
