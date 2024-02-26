@@ -207,7 +207,33 @@ console.log(a.length);
       reject('error');
     }
   }, 10000);
- }); ```
+ }); 
+```
+- Promise object has three functions:
+	- `then`: function called if promise is fulfilled
+ 	- `catch`: function called if promise is rejected
+  	- `finally`: function always called after all processing is complete.
+  ```javascript
+    const coinToss = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.1) {
+      resolve(Math.random() > 0.5 ? 'heads' : 'tails');
+    } else {
+      reject('fell off table');
+    }
+  }, 10000);
+	}); same code as above but adds rejected state 10 percent of time  
+	coinToss
+  .then((result) => console.log(`Coin toss result: ${result}`))
+  .catch((err) => console.log(`Error: ${err}`))
+  .finally(() => console.log('Toss completed'));
+
+	// OUTPUT:
+	//    Coin toss result: tails
+	//    Toss completed  
+```
+
+
 
 
 
