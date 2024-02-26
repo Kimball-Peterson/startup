@@ -183,8 +183,31 @@ console.log(a.length);
 			});
   	     	```
   	      	- EL can also be added directly in HTML `onclick`:  
-  	      	- ```<button onclick='alert("clicked")'>click me</button>```  
-  
+  	      	- ```<button onclick='alert("clicked")'>click me</button>```
+**JAVASCRIPT PROMISES**
+- Rendering thread of HTML executes on single thread. Means that JavaScript processing on main rendering thread cannot take a long time.  
+- Long running, or blocking tasks should use a JavaScript `Promise`  
+- `Promise`: Allows the main rendering thread to continue while an action is executed in the background.  
+  - Promise is created by calling Promise object constructor and passing an executor function that runs the asynchronous operation. Promise constructor may return before promise executor function runs.  
+  - Three promise execution states:
+  	- Pending: currently running asynchronously
+  	- Fulfilled: Completed successfully
+   	- Rejected: Failed to complete
+- `setTimout` function - creates a delay in execution of the code.
+	- Takes number of milliseconds to wait and a function to call after that amount of time has expired.
+- Promise executor takes two functions as parameters, `resolve`and `reject`
+	- `resolve`: sets promise to `fulfilled` state
+ 	- `reject` : sets promise to `rejected` state
+ 	-  `const coinToss = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.5) {
+      resolve('success');
+    } else {
+      reject('error');
+    }
+  }, 10000);
+ });`
+
   	     
   	  	   
   	
