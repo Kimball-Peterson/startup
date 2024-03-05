@@ -239,7 +239,23 @@ console.log(a.length);
   - Basically turns any function into an asynchronous function so that it can make asynchronous requests.
 
 - `await` wraps a call to the `async`function, blocks execution until the promise has resolved and returns the promise result.
-- 
+
+##Fetch##  
+- Web 2.0 is fueled by ability to make HTTP requests from JavaScript
+- fetch API is preferred way to make HTTP requests  
+- `fetch` function is built into the browser's JavaScript runtime (can be called from JavaScript code running in a browser)  
+- Basic usage of fetch takes a URL and returns a promise. promise `then` function takes a callback function that is asynchronously called when the requested URL content is obtained.
+- If returned content is of type `application/json` you can use `json` function on response object to convert to a JavaScript object  
+- Example
+- 	```javascript
+   	  fetch('https://api.quotable.io/random')
+  	.then((response) => response.json())
+  	.then((jsonResponse) => {
+   	 console.log(jsonResponse);
+ 	 });
+   	```
+  - 
+
 
 
 
