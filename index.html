@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width,initial-scale=1" />
 <html lang="en">
-  <style type="text/css">
-    div.login_display {text-align: right;}
-    div.input_display {text-align: right;}
-  </style>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speed Sales</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<title>Speed Sales</title
+  <style type="text/css">
+    div.login_display { text-align: right; }
+    div.input_display { text-align: right; }
+  </style>
+</head>
+<body>
   <hr>
   <h1>Speed Sales</h1>
   <hr>
-<div class="login_overall">
-  <div class="login_display"> 
-    Login: 
-  <input class="input_display"></input>
-  </div>  
-  <div class="login_display">Password: 
-  <input class="input_display"></input>
+  <div class="login_overall">
+    <div class="login_display"> 
+      Login: 
+      <input class="input_display"></input>
+    </div>  
+    <div class="login_display">
+      Password: 
+      <input class="input_display"></input>
+    </div>
+    <div class="login_button">
+      <button class="btn btn-normal">Login</button>
+    </div>
+    <div class="login_display">Username display placeholder (meant to be on far right)</div>
   </div>
-  <div class="login_button">
-    <button class="btn btn-normal">Login</button>
-  </div>
-  <div class="login_display">Username display placeholder ( meant to be on far right)</div>
-</div>
-</head>
-<hr>
-
+  <hr>
   <nav> 
     <ul class="nav justify-content-center">
       <li class="nav-item">
-         <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./reads.html">Reads</a>
@@ -46,39 +48,35 @@
       </li>
     </ul>
   </nav>
-
-<hr>
-<body>
+  <hr>
   <div class="row">
     <div class="RS6">
-    <img src="RS6.jpg" alt="AaronBHall's RS6" class="responsive"></div> 
+      <img src="RS6.jpg" alt="AaronBHall's RS6" class="gallery-img responsive"> 
     </div>
   </div>
   <div class="row2">
-    <p>Speed Sales is meant to be a platform for the sale of, appreciation of and community surrounding cars, trucks and motorsports. Cars across genres are welcome and sharing is encouraged. There is a main page allowing for the creation of an account, or login to an existing account. The mission of Speed Sales is to provide a way to buy, sell and discuss vehicles all in the same platform. The hope is that real time metrics, comments and a future messaging option allow for people to get a better idea of what it is they are looking at to provide a better buying experience for niche builds like offroad specific, track specific and other kinds of specialty cars that struggle to sell in the open market due to lack of understanding.</p>
+    <p>Speed Sales is meant to be a platform for the sale of, appreciation of and community surrounding cars, trucks and motorsports. Cars across genres are welcome and sharing is encouraged...</p>
   </div>
-
-<hr>
-
-<footer>
-  <h3>Speed Journal<h3>
-  <div class="row">
+  <hr>
+  <div id="lightbox-modal" class="modal">
+    <span id="close-modal" class="close">&times;</span>
+    <img class="modal-content" id="lightbox-image">
+    <div id="caption"></div>
+  </div>
+  <script src="lightbox_index.js"></script>
+  <footer>
+    <h3>Speed Journal</h3>
+    <div class="row">
       <div class="column">
         <div class="footer-link">
           <a href="SpeedSales@gmail.com">Contact Us</a>
         </div>
       </div>
-    <div class="column2">
-      <div class="footer-link2">
-        <a href="https://github.com/Kimball-Peterson/startup.git">Github link</a>
+      <div class="column2">
+        <div class="footer-link2">
+          <a href="https://github.com/Kimball-Peterson/startup.git">Github link</a>
+        </div>
       </div>
-    </div>
-    <div class="column3">
-      <div>3rd Party Social Media Buttons</div>
-      <div class="footer-link3">
-      </div>
-    </div>
-</body>
-</footer>
-</html>
+      <div class
+
 

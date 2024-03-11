@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="styles.css">
+<script src="lightbox_stellarlc.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <html lang="en">
   <style type="text/css">
@@ -61,7 +62,18 @@
   </div>
 </div>
 <hr>
+<div id="lightbox-modal" class="lightbox-modal">
+  <span id="close-modal" class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+</div>
+<div id="lightbox-modal" class="modal">
+  <span id="close-modal" class="close">&times;</span>
+  <img class="modal-content" id="lightbox-image">
+  <div id="caption"></div>
+</div>
 
+<script src="lightbox_index.js"></script>
+</body>
 <footer>
   <h3>Reads<h3>
     <div>3rd Party Social Media Buttons</div>

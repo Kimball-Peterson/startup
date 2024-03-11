@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style type="text/css">
     div.login_display {text-align: right;}
     div.input_display {text-align: right;}
   </style>
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<title>Speed Sales</title
+  <title>Speed Sales</title
   <hr>
   <h1>Speed Sales</h1>
   <hr>
@@ -50,11 +50,10 @@
 <hr>
 <body>
 <div> 
-    <h2>2002 or 2023? Kinkade Pavich's Works CR250R </h2>
-    <div> <img src="CR250.jpg" alt="LC80" class="responsive"></div>
-    <p1>Lorem Ipsum text. </p1>
+    <h2 class="reads-header">2002 or 2023? Kinkade Pavich's Works CR250R </h2>
+    <div> <img src="CR250.jpg" alt="Kinkade Pavich's Works CR250R" class="gallery-img"></div>
+    <p>Lorem Ipsum text. </p>
     <hr>
-
 </div>
 
 <div class="classifiedsbanner">
@@ -66,6 +65,18 @@
   </div>
 </div>
 <hr>
+<div id="lightbox-modal" class="lightbox-modal">
+  <span id="close-modal" class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+</div>
+<div id="lightbox-modal" class="modal">
+  <span id="close-modal" class="close">&times;</span>
+  <img class="modal-content" id="lightbox-image">
+  <div id="caption"></div>
+</div>
+
+<script src="lightbox_cr250.js"></script>
+</body>
 
 <footer>
   <h3>Reads<h3>
@@ -83,7 +94,4 @@
     </div>
   </div>
 </footer>
-
-
-
 </html>
