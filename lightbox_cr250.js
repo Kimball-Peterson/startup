@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     const modal = document.getElementById('lightbox-modal');
     const images = document.querySelectorAll('.gallery-img');
     const modalImg = document.getElementById('lightbox-image');
