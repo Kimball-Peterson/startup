@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <html lang="en">
-  <style type="text/css">
-    div.login_display {text-align: right;}
-    div.input_display {text-align: right;}
-  </style>
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<title>Speed Sales</title
+  <link rel="stylesheet" href="styles.css">
+  <style type="text/css">
+    div.login_display {text-align: right;}
+    div.input_display {text-align: right;}
+  </style>
+  <title>Speed Sales</title>
   <hr>
   <h1>Speed Sales</h1>
   <hr>
@@ -57,7 +57,7 @@
       <div> <p>Videos, Photos, Gallery Style, Cards, but in a list/p>
           <p>Each card with option to scroll, click on read more tag later in the description. Photo/video on each, tile is same color as background. Everything will be centered and show more photos and styling.</p>     
       </div>
-      <div> <img src="328d.jpg" alt="328D" class="responsive"></div>
+      <div> <img src="328d.jpg" alt="328D" class="gallery-img"></div>
       <div>Comment section placeholder</div>
     </div>
   <hr>
@@ -65,7 +65,7 @@
       <div> <p>Videos, Photos, Gallery Style, Cards, but in a list/p>
         <p>Each card with option to scroll, click on read more tag later in the description. Photo/video on each, tile is same color as background. Everything will be centered and show more photos and styling.</p>     
       </div>
-    <div> <img src="KibbeRaptor.jpg" alt="Kibbetech Raptor" class="responsive"></div>
+    <div> <img src="KibbeRaptor.jpg" alt="Kibbetech Raptor" class="gallery-img"></div>
     <div>Comment section placeholder</div>
     </div>
   <hr>
@@ -86,6 +86,12 @@
   <div class="row2">
   </div>
 </div>
+<div id="lightbox-modal" class="modal">
+  <span id="close-modal" class="close">&times;</span>
+  <img class="modal-content" id="lightbox-image">
+  <div id="caption"></div>
+</div>
+<script src="media.js"></script>
 </body>
 <hr>
 
