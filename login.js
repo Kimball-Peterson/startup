@@ -1,8 +1,11 @@
 function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
+    var postingAccountNames = document.querySelectorAll('.postingAccountName');
+    postingAccountNames.forEach(function(accountName) {
+      accountName.textContent = username;
+    });
 
-    
     var correctUsername = 'admin';
     var correctPassword = 'pass';
 

@@ -50,15 +50,24 @@
     <h2>Media</h2>
   </div>
     <div class="media_tile">
-      <div> <p>Videos, Photos, Gallery Style, Cards, but in a list/p>
-          <p>Each card with option to scroll, click on read more tag later in the description. Photo/video on each, tile is same color as background. Everything will be centered and show more photos and styling.</p>     
+      <div> <p>Videos, Photos, Gallery Style, Cards, but in a list</p>
+          <p>Each card with option to like, comment, look for inspiration.</p>     
       </div>
       <div> <img src="328d.jpg" alt="328D" class="gallery-img"></div>
+      <div class="mediaCaption">
+        <h3 class="postingAccountName"></h3>: 
+        <span class="captionText">Here is a beautiful 328d with tasteful wheels and a set of performance coilovers.</span>
+        <div class="accountName"></div>
+      </div>
      
       <input type="text" id="commentInput" placeholder="Write a comment...">
         <button class="commentButton" onclick="addComment()">Post</button>
         
         <div id="commentSection"></div>
+        <div class="like_section">
+          <button class="like_button">Like</button>
+          <span class="like_count">0</span> Likes
+        </div>
     </div>
   <hr>
     <div class="media_tile">
@@ -70,17 +79,26 @@
         <button class="commentButton" onclick="addComment()">Post Comment</button>
         
         <div id="commentSection"></div>
+        <div class="like_section">
+          <button class="like_button">Like</button>
+          <span class="like_count">0</span> Likes
+        </div>
     </div>
   <hr>
   <div class="media_tile">
     <div>Ben Hartnett Doing What He Does Best
       <p></p>     
     </div>
-  <div> <iframe class="responsive" src="https://youtu.be/w0N1IiF-AmE?si=H27JTJ-w8cqxXA5V"></iframe></div>
-  <input type="text" id="commentInput" placeholder="Write a comment...">
+    <div> <iframe class="responsive" src="https://youtu.be/w0N1IiF-AmE?si=H27JTJ-w8cqxXA5V"></iframe></div>
+      <input type="text" id="commentInput" placeholder="Write a comment...">
         <button onclick="addComment()">Post Comment</button>
         
         <div id="commentSection"></div>
+
+        <div class="like_section">
+          <button class="like_button">Like</button>
+          <span class="like_count">0</span> Likes
+        </div>
   </div>
 </div>
 

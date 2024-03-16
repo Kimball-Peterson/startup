@@ -210,7 +210,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+  
 }
 
 .commentStyling {
@@ -234,4 +234,41 @@ body {
 .paragraphStyling {
   margin-left: 12%;
   margin-right: 12%;
+}
+
+/* Like Section */
+.like_section {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.like_button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.like_button:hover {
+  background-color: #0056b3;
+}
+
+.like_count {
+  margin-left: 5px;
+  font-weight: bold;
+}
+/* caption styling */
+.mediaCaption {
+}
+
+.postingAccountName, .captionText {
+  display: inline;
+  margin: 0;
+  font-size: 1em;
+}
+
+.captionText {
+  flex: 1; /* Ensures it takes up the remaining space */
 }

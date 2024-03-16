@@ -36,3 +36,13 @@ function addComment() {
               input.value = ""; // Clear the input field after adding the comment
           }
       };
+
+document.addEventListener('DOMContentLoaded', function() {
+        var likeButton = document.querySelector('.like_button');
+        var likeCountDisplay = document.querySelector('.like_count');
+      
+        likeButton.addEventListener('click', function() {
+          var currentCount = parseInt(likeCountDisplay.textContent, 10);
+          likeCountDisplay.textContent = currentCount + 1;
+        });
+      });     
