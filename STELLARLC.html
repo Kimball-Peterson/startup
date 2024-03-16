@@ -15,18 +15,11 @@
   <hr>
   <h1>Speed Sales</h1>
   <hr>
-<div class="login_overall">
-  <div class="login_display"> 
-    Login: 
-  <input class="input_display"></input>
-  </div>  
-  <div class="login_display">Password: 
-  <input class="input_display"></input>
-  </div>
-  <div class="login_button">
-    <button class="btn btn-normal">Login</button>
-  </div>
-  <div class="login_display">Username display placeholder ( meant to be on far right)</div>
+  <div class="login_form">
+    Username: <input type="text" id="username" />
+    Password: <input type="password" id="password" />
+    <button onclick="login()">Login</button>
+    <div id="loginMessage"></div>
 </div>
 </head>
 <hr>
@@ -51,10 +44,17 @@
 <hr>
 <body>
 <div> 
-    <h2>The Crawler Camper. Stellar Built's LC80</h2>
+  <h2 class="reads-header">The Crawler Camper. Stellar Built's LC80</h2>
     <div> <img src="STELLARLC.jpg" alt="LC80" class="gallery-img"></div>
-    <p1>Lorem Ipsum Text</p1>
+    <p class ="paragraphStyling">Stellar Offroads has unveiled their latest project, transforming the rugged LC80 Land Cruiser into an adventurer's dream with a focus on a rooftop tent setup rather than the traditional camper buildout. This innovative design choice emphasizes mobility and simplicity, allowing enthusiasts to explore the great outdoors without the added bulk of a full camper. The LC80, known for its durability and off-road prowess, has been further enhanced with solid axles for superior traction and control in even the most challenging terrains.</p>
+    <br>
+    <p class ="paragraphStyling">The centerpiece of this build is the state-of-the-art rooftop tent, which offers a comfortable and elevated sleeping space that can be deployed in minutes. Unlike a fixed camper, this setup provides unparalleled flexibility, enabling adventurers to set up camp wherever their journey takes them – from remote wilderness locations to scenic overlooks. The tent is complemented by a suite of off-road accessories and modifications, including upgraded suspension and all-terrain tires, ensuring that the LC80 Cruiser is not only a mobile haven but also a capable expedition vehicle ready to tackle any adventure. This Stellar Offroads LC80 build with its rooftop tent setup represents the ultimate in off-road adventure, combining rugged functionality with the freedom to explore the unknown.</p>
     <hr>
+    <div class="commentStyling">
+      <input type="text" id="commentInput" placeholder="Write a comment...">
+      <button onclick="addComment()">Post Comment</button>
+      <div id="commentSection"></div>
+    </div>
 </div>
 
 <div class="classifiedsbanner">

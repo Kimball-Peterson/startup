@@ -14,18 +14,11 @@
   <hr>
   <h1>Speed Sales</h1>
   <hr>
-<div class="login_overall">
-  <div class="login_display"> 
-    Login: 
-  <input class="input_display"></input>
-  </div>  
-  <div class="login_display">Password: 
-  <input class="input_display"></input>
-  </div>
-  <div class="login_button">
-    <button class="btn btn-normal">Login</button>
-  </div>
-  <div class="login_display">Username display placeholder ( meant to be on far right)</div>
+  <div class="login_form">
+    Username: <input type="text" id="username" />
+    Password: <input type="password" id="password" />
+    <button onclick="login()">Login</button>
+    <div id="loginMessage"></div>
 </div>
 </head>
 <hr>

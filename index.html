@@ -17,20 +17,19 @@
   <hr>
   <h1>Speed Sales</h1>
   <hr>
-  <div class="login_overall">
-    <div class="login_display"> 
-      Login: 
-      <input class="input_display"></input>
-    </div>  
-    <div class="login_display">
-      Password: 
-      <input class="input_display"></input>
-    </div>
-    <div class="login_button">
-      <button class="btn btn-normal">Login</button>
-    </div>
-    <div class="login_display">Username display placeholder (meant to be on far right)</div>
+  <div class="login_form">
+    <div>
+    Username: <input type="text" id="username" />
   </div>
+  <div> 
+    Password: <input type="password" id="password" />
+    </div>
+    <div>
+    <button onclick="login()">Login</button>
+  </div>
+    <div id="loginMessage"></div>
+    <div id="usernameDisplay"></div>
+</div>
   <hr>
   <nav> 
     <ul class="nav justify-content-center">
@@ -64,6 +63,8 @@
     <div id="caption"></div>
   </div>
   <script src="lightbox_index.js"></script>
+  <script src="login.js"></script>
+  </body>
   <footer>
     <h3>Speed Journal</h3>
     <div class="row">

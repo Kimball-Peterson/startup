@@ -14,18 +14,11 @@
   <hr>
   <h1>Speed Sales</h1>
   <hr>
-<div class="login_overall">
-  <div class="login_display"> 
-    Login: 
-  <input class="input_display"></input>
-  </div>  
-  <div class="login_display">Password: 
-  <input class="input_display"></input>
-  </div>
-  <div class="login_button">
-    <button class="btn btn-normal">Login</button>
-  </div>
-  <div class="login_display">Username display placeholder ( meant to be on far right)</div>
+  <div class="login_form">
+    Username: <input type="text" id="username" />
+    Password: <input type="password" id="password" />
+    <button onclick="login()">Login</button>
+    <div id="loginMessage"></div>
 </div>
 </head>
 <hr>
@@ -52,8 +45,18 @@
 <div> 
     <h2 class="reads-header">2002 or 2023? Kinkade Pavich's Works CR250R </h2>
     <div> <img src="CR250.jpg" alt="Kinkade Pavich's Works CR250R" class="gallery-img"></div>
-    <p>Lorem Ipsum text. </p>
+    <p class="paragraphStyling">In the world of motocross, the Honda CR250 has long held a legendary status, captivating enthusiasts with its raw power and agility. Imagine taking a classic 2002 model, a bike that has carved its legacy on the tracks, and reimagining it with today's cutting-edge technology and design philosophy. This dream has been turned into reality with the 2023 "works" edition of the Honda CR250, a project that bridges two eras of motocross engineering.</p>
+    <br>
+    <p class ="paragraphStyling">This newly reimagined Honda CR250 is not just a restoration; it's a complete overhaul that transforms the iconic 2002 model into a modern marvel. Every component has been meticulously upgraded to meet the demands of contemporary racing while preserving the soul that made the original so beloved. The frame, while retaining its classic geometry for that unmistakable CR250 feel, has been fabricated from lightweight materials for improved handling and durability. The engine, a masterpiece of performance tuning, combines the raw, two-stroke power of the 2002 model with today's fuel injection and exhaust systems, offering explosive acceleration and a broader powerband.</p>
+    <br>
+    <p class ="paragraphStyling">The aesthetics of the bike pay homage to its roots, with a design that nods to the past but looks firmly towards the future. The classic Honda red is complemented by modern graphics and styling, making this bike a head-turner both on and off the track. The 2023 "works" CR250 is more than just a motorcycle; it's a tribute to the golden age of motocross, reengineered for today's adrenaline-fueled world. For enthusiasts and collectors alike, this bike represents the perfect fusion of nostalgia and innovation, a two-wheeled testament to the enduring spirit of competition that has defined Honda for decades.</p>
+    <br>
     <hr>
+    <div class="commentStyling">
+      <input type="text" id="commentInput" placeholder="Write a comment...">
+      <button onclick="addComment()">Post Comment</button>
+      <div id="commentSection"></div>
+    </div>
 </div>
 
 <div class="classifiedsbanner">

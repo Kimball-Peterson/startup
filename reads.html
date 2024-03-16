@@ -14,18 +14,18 @@
   <hr>
   <h1>Speed Sales</h1>
   <hr>
-<div class="login_overall">
-  <div class="login_display"> 
-    Login: 
-  <input class="input_display"></input>
-  </div>  
-  <div class="login_display">Password: 
-  <input class="input_display"></input>
+  <div class="login_form">
+    <div>
+    Username: <input type="text" id="username" />
   </div>
-  <div class="login_button">
-    <button class="btn btn-normal">Login</button>
+  <div> 
+    Password: <input type="password" id="password" />
+    </div>
+    <div>
+    <button onclick="login()">Login</button>
   </div>
-  <div class="login_display">Username display placeholder ( meant to be on far right)</div>
+    <div id="loginMessage"></div>
+    <div id="usernameDisplay"></div>
 </div>
 </head>
 <hr>
@@ -64,14 +64,22 @@
       <a href="CR250.html">
         <h3>2002 or 2023? Kinkade Pavich's Works CR250R</h3>
       </a>
-      <div>Comment section placeholder</div>
+      <div class="commentStyling">
+        <input type="text" id="commentInput" placeholder="Write a comment...">
+        <button onclick="addComment()">Post Comment</button>
+        <div id="commentSection"></div>
+      </div>
     </div>
     <hr>
     <div class="reads_tile">
       <a href="STELLARLC.html">
         <h3>The Crawler Camper.  Stellar Built's LC80 </h3>
       </a>
-      <div>Comment section placeholder</div>
+      <div class="commentStyling">
+        <input type="text" id="commentInput" placeholder="Write a comment...">
+        <button onclick="addComment()">Post Comment</button>
+        <div id="commentSection"></div>
+      </div>
     </div>
     <hr>
     
@@ -92,6 +100,7 @@
   <span id="close-modal" class="close">&times;</span>
   <img class="modal-content" id="modal-image">
 </div>
+<script src="login.js"></script>
 </body>
 <footer>
   <h3>Reads<h3>
