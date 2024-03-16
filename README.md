@@ -1,4 +1,4 @@
-# Startup
+s# Startup
 Startup application for CS260
 
 ## Elevator Pitch
@@ -59,8 +59,9 @@ Properly styled CSS - Dark colors, new fonts, better spacing, separation added.
 10% Application images - All responsive and formatted for site.  
   
 ### Startup JS  
-20% JavaScript support for future login. - Login placed using localStorage to store username.
-20% JavaScript support for future database data. - Created dropdown menu for classifieds listing section, javascript will fetch car makes and models from database, currently just hard coded.
-20% JavaScript support for future WebSocket. - 
-40% JavaScript support for your application's interaction logic. - 
+20% JavaScript support for future login. - Login placed using localStorage to store username.  
+20% JavaScript support for future database data. - Created dropdown menu for classifieds listing section, javascript will fetch car makes and models from database, currently just hard coded.  
+20% JavaScript support for future WebSocket. -   
+40% JavaScript support for your application's interaction logic. -   
+
 
