@@ -124,8 +124,24 @@ body {
   ._title {
     padding-top: 10px;
   }
- 
+  .price-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 
+  .dropdown-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .ad-price {
+    align-items: center;
+  }
   .reads_p{
     padding: 10px;
   }
