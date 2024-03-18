@@ -240,7 +240,7 @@ console.log(a.length);
 
 - `await` wraps a call to the `async`function, blocks execution until the promise has resolved and returns the promise result.
 
-##Fetch##  
+##Fetch
 - Web 2.0 is fueled by ability to make HTTP requests from JavaScript
 - fetch API is preferred way to make HTTP requests  
 - `fetch` function is built into the browser's JavaScript runtime (can be called from JavaScript code running in a browser)  
