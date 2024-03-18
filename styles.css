@@ -260,8 +260,7 @@ body {
   font-weight: bold;
 }
 /* caption styling */
-.mediaCaption {
-}
+
 
 .postingAccountName, .captionText {
   display: inline;
@@ -271,4 +270,18 @@ body {
 
 .captionText {
   flex: 1; /* Ensures it takes up the remaining space */
+}
+
+/* notification styling */
+
+#notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b45d56;
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
