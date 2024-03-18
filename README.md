@@ -59,9 +59,11 @@ Properly styled CSS - Dark colors, new fonts, better spacing, separation added.
 10% Application images - All responsive and formatted for site.  
   
 ### Startup JS  
-20% JavaScript support for future login. - Login placed using localStorage to store username.  
-20% JavaScript support for future database data. - Created dropdown menu for classifieds listing section, javascript will fetch car makes and models from database, currently just hard coded.  
-20% JavaScript support for future WebSocket. -   
-40% JavaScript support for your application's interaction logic. -   
+20% JavaScript support for future login. - Login placed using localStorage to store username. Displays username under login. Uses username for content author info on media page and classifieds as well(works ok)   
+20% JavaScript support for future database data. - Created dropdown menu for classifieds listing section, will fetch car makes and models from database, currently just hard coded.  
+20% JavaScript support for future WebSocket. - Created classifieds form to make an ad. Hard coded timed notification after 5 seconds. Will notify of new classifieds ads in the future. Websocket will provide notifications of new classifieds listings.  
+40% JavaScript support for your application's interaction logic. -  Interaction with images, classifieds, likes and comments all added. Comments generate and stay until page refreshes.   
 
+
+  
 
