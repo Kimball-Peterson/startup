@@ -240,7 +240,7 @@ console.log(a.length);
 
 - `await` wraps a call to the `async`function, blocks execution until the promise has resolved and returns the promise result.
 
-##Fetch
+###Fetch
 - Web 2.0 is fueled by ability to make HTTP requests from JavaScript
 - fetch API is preferred way to make HTTP requests  
 - `fetch` function is built into the browser's JavaScript runtime (can be called from JavaScript code running in a browser)  
@@ -254,8 +254,51 @@ console.log(a.length);
    	 console.log(jsonResponse);
  	 });
    	```
-  - 
+###Express  
+- Everything in express revolves around creating and using http routing and middleware functions.
+- Express application is created by using NPM to install Express package and then call `express` constructor to create the Express application and listen for HTTP requests on desired port.
+- ```javascript
+  const express = require('express');
+  const app = express();
 
+  app.listen(8080);
+  ```
+- HTTP endpoints implemented by defining routes that call function based on HTTP path.
+- `app` object supports all HTTP verbs as functions on the object.
+- ex.
+  ```javascript
+  app.get('/store/provo', (req, res, next) => {
+  	res.send({name: 'provo'});
+  });
+  ```
+- `get` function takes two parameters, URL path matching pattern and callback function to invoke when pattern matches.
+- callback function has three parameters representing HTTP request object(`req`), HTTP response object (`res`), and `next` routing function that Express expects to be called if routing function wants another function to generate a response.
+##Middleware
+- Middleware design pattern has two pieces: mediator and middleware.  
+  	- Middleware represents componentized pieces of functionality.  
+  	- Mediator loads the middleware components and determines order of execution.
+  	- Request reaches mediator then is passed around to the middleware components. 
+	- Express has standard set of middleware functions for routing, authentication, CORS, sessions, serving static web files, cookies, and logging.  
+ - Middleware function looks very similar to routing function.  
+ - `function middlewareName(req, res, next)`
+ - function parameters represent HTTP request object `req` , HTTP response object `res`, `next` middleware function to pass processing to.  
+ - Creating your own middleware:  
+``` javascript
+app.use((req, res, next) => {
+	console.log(req.originalUrl);
+	next();
+});
+```
+- order that middleware is added to Express app object controls order that functions are called.  
+- Any middleware that doesnt call `next` function after processing stops middleware chain from continuing.  
+## Third Party Middleware  
+- Third party functions can be used by using NPM to install pack and including the package in your Javascript with `require` function.  
+- Error Handling Middleware:
+		- Error middleware takes additional `err` parameter that contains the error.
+  ``` javascript
+  function errorMiddlewareName(err, req, res, next)
+  ```
+-  	
 
 
 
