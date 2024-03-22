@@ -64,6 +64,12 @@ Properly styled CSS - Dark colors, new fonts, better spacing, separation added.
 20% JavaScript support for future WebSocket. - Created classifieds form to make an ad. Hard coded timed notification after 5 seconds. Will notify of new classifieds ads in the future. Websocket will provide notifications of new classifieds listings.  
 40% JavaScript support for your application's interaction logic. -  Interaction with images, classifieds, likes and comments all added. Comments generate and stay until page refreshes.   
 
-
+### Startup Service  
+Backend web service support and interaction  
+40% - Create an HTTP service using Node.js and Express  
+10% - Frontend served up using Express static middleware  
+10% - Your frontend calls third party service endpoints  
+20% - Your backend provides service endpoints  
+20% - Your frontend calls your service endpoints  
   
 
