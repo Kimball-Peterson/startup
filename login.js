@@ -6,7 +6,7 @@ function login() {
       accountName.textContent = username;
     });
 
-    var correctUsername = 'admin';
+    var correctUsername = 'kimball';
     var correctPassword = 'pass';
 
     

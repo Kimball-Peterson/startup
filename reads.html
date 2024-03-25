@@ -60,27 +60,27 @@
       <p>These will be stories mostly focused on tech stuff, car build breakdowns and manufacturer news (type focus, media will cover things like photo and video releases), reviews. I left each tile with no photo because I like the idea of having to actually read content. Only a test, but thought I would explain myself because its a little out of the ordinary.</p>
     </div>
     <hr>
-    <div class="reads_tile">
+    <div class="reads_tile" data-tile-id="tile1">
       <a href="CR250.html">
         <h3>2002 or 2023? Kinkade Pavich's Works CR250R</h3>
       </a>
-      <div class="commentStyling">
-        <input type="text" id="commentInput" placeholder="Write a comment...">
-        <button onclick="addComment()">Post Comment</button>
-        <div id="commentSection"></div>
+      <div>
+        <input type="text" class="commentInput" placeholder="Write a comment...">
+        <button class="postComment">Post</button>
+        <div class="commentSection"></div>
+      </div>
       </div>
     </div>
     <hr>
-    <div class="reads_tile">
+    <div class="reads_tile" data-tile-id="tile2">
       <a href="STELLARLC.html">
         <h3>The Crawler Camper.  Stellar Built's LC80 </h3>
       </a>
-      <div class="commentStyling">
-        <input type="text" id="commentInput" placeholder="Write a comment...">
-        <button onclick="addComment()">Post Comment</button>
-        <div id="commentSection"></div>
-      </div>
+      <input type="text" class="commentInput" placeholder="Write a comment...">
+      <button class="postComment">Post</button>
+      <div class="commentSection"></div>
     </div>
+  </div>
     <hr>
     
   </div>
@@ -101,6 +101,7 @@
   <img class="modal-content" id="modal-image">
 </div>
 <script src="login.js"></script>
+<script src="media.js"></script>
 <script src="notification.js"></script>
 <div id="notification" style="display:none;"></div>
 </body>

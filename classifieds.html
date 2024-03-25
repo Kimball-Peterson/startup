@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<title>Speed Sales</title
+<title>Speed Sales</title>
   <hr>
   <h1>Speed Sales</h1>
   <hr>
@@ -46,7 +46,7 @@
   <div class="classifieds-ad-tile">
     <h2 class="ad-title">Create A New Classifieds Ad</h2>
     <div class="ad-image">
-      <img src="BryceE30.jpg" alt="Bryce's E30" class="gallery-img responsive">
+      <img src="BryceE30.jpg" alt="Bryce's E30" class="gallery-img">
     </div>
     <div class="placeholder">Websocket data below(currently hard code</div>
     <div class="ad-info">
@@ -54,7 +54,7 @@
       <input type="text" class="ad-description"></input>
       <div class="dropdown-container">
         <label for="manufacturer">Manufacturer:</label>
-        <select id="manufacturer name="Manufacturer">
+        <select id="manufacturer" name="Manufacturer">
           <option value="">Select Manufacturer: </option>
           <option value="bmw">BMW</option>
           <option value="toyota">Toyota</option>
@@ -128,8 +128,8 @@
           <input type="text" class="ad-price" placeholder="Enter price">
         </div>
         <br>
-        <a href="#" class="ad-link">Contact Seller</a>
-        </div>  
+        </div> 
+        <button id="createAdButton">Create Ad</button> 
    </div>
 
 
@@ -139,18 +139,19 @@
   <div class="row">
     
   </div>
-  <div><p></p></div>
+<div><p></p></div>
   <div class="row2">
     <p> Disclaimer about private sales. (Advertise sales payment platform in future)</p>
     <p>Database info will be included in dropdown for car make and model, or offer option to list as something custom.</p>
   </div>
 </div>
 <script src="notification.js"></script>
+<script src="login.js"></script>
+<script src="media.js"></script>
 <div id="notification" style="display:none;"></div>
-
+<script src="classifieds.js"defer></script>
 </body>
 <hr>
-
 <footer>
   <h3>Classifieds<h3>
       <div class="row">
@@ -169,6 +170,7 @@
           <div class="footer-link3">
           </div>
         </div>
-    </body>
-    </footer>
-    </html>
+</footer>
+
+
+</html>
