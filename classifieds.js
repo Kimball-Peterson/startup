@@ -13,13 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
 
-        // console.log("Create Ad button works.");
-        // console.log(adDescriptionInput.value);
-        // console.log(manufacturerSelect.value);
-        // console.log(modelSelect.value);
-        // console.log(yearSelect.value);
-        // console.log(priceInput.value);
-
         const adElement = document.createElement('div');
             adElement.className = 'generated-ad';
             adElement.classList.add('generated-ad-padded');
