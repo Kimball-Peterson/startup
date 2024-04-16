@@ -117,6 +117,204 @@ a.push(4);
 console.log(a.length);
 // OUTPUT: 4
 ```
+- **DOM:** Document Object Model is object representation of HTML elements that browser uses to render the display. Browser exposes the DOM to external codes to allow you to write programs that dynamically manipulate HTML.  
+	- Access to DOM through global variable name `document`  
+ 	- There is a node in the DOM for everything in an HTML doc. All form a tree with a document node at top.  
+  	- DOM Element Interface: Every element in an HTML doc implements the DOM Element Interface, which is derived from 	DOM Node interface. DOM Element interface provides the means for iterating child elements, accessing parent element, 	and changing element's attributes.
+  	- ```javascript
+  	  function displayElement(el) {
+  		console.log(el.tagName);
+ 		for (const child of el.children) {
+    		  displayElement(child);
+  		}
+	  }
+
+	  displayElement(document);```
+
+  	- CSS selector can be provided to `querySelectorAll` function to select elements from the doc.  
+  		- `textContent` property contrains all of element's text.  
+  	 	- innerHTML accesses textual representation of an element's HTML  
+  	  	- ```javascript
+  	  	  const listElements = document.querySelectorAll('p');
+		  for (const el of listElements) {
+  		  console.log(el.textContent);
+		  }
+    		```  
+  	- Modifying the DOM  
+  		- DOM supports ability to insert, modify, delete elements in the DOM.
+  	  		- To create element, first create element on DOM document.
+  	    		- Insert the new element into DOM tree by appending to an existing element in tree
+  	     	- ```javascript
+  	          function insertChild(parentSelector, text) {
+  		    	const newChild = document.createElement('div');
+  		    	newChild.textContent = text;
+
+  		    	const parentElement = document.querySelector(parentSelector);
+  		    	parentElement.appendChild(newChild);
+  	        	}
+				insertChild('#courses', 'new course');
+		  ```
+
+  	  	- To delete: call `removeChild` function on parent element
+  	   		```javascript
+  	     		function deleteElement(elementSelector) {
+  				const el = document.querySelector(elementSelector);
+  				el.parentElement.removeChild(el);
+			}
+
+			deleteElement('#courses div');  
+  	     		```
+  	  - Injecting HTML: DOM allows entire blocks of HTML to be injected into an element.  
+		```javascript
+		const el = document.querySelector('div');
+		el.innerHTML = '<div class="injected"><b>Hello</b>!</div>';
+		```  
+		- Directly injected HTML as a block of text is a common attack vector for hackers.   
+		- IF JAVASCRIPT CAN BE INJECTED ANYWHERE IN YOUR APPLCATION THEN THAT JAVASCRIPT CAN REPRESENT 				  ITSELF AS THE CURRENT USER OF THE APPLICATION.  
+		- Make sure all injected HTML cannot be manipulated by a user.  
+		- Common injection paths: HTML input controls, URL parameters, and HTTP headers.  
+		- Either sanitize any HTML that contains variables, or simply use DOM manipulation functions instead 			  of `innerHTML`
+  	    
+  	  - Event Listeners: All DOM elemenets support ability to attach a function that gets called when an event occurs on 	    the element.  
+  	  	- ``` javascript
+  	     		const submitDataEl = document.querySelector('#submitData');
+			submitDataEl.addEventListener('click', function (event) {
+  				console.log(event.type);
+			});
+  	     	```
+  	      	- EL can also be added directly in HTML `onclick`:  
+  	      	- ```<button onclick='alert("clicked")'>click me</button>```
+**JAVASCRIPT PROMISES**
+- Rendering thread of HTML executes on single thread. Means that JavaScript processing on main rendering thread cannot take a long time.  
+- Long running, or blocking tasks should use a JavaScript `Promise`  
+- `Promise`: Allows the main rendering thread to continue while an action is executed in the background.  
+  - Promise is created by calling Promise object constructor and passing an executor function that runs the asynchronous operation. Promise constructor may return before promise executor function runs.  
+  - Three promise execution states:
+  	- Pending: currently running asynchronously
+  	- Fulfilled: Completed successfully
+   	- Rejected: Failed to complete
+- `setTimout` function - creates a delay in execution of the code.
+	- Takes number of milliseconds to wait and a function to call after that amount of time has expired.
+- Promise executor takes two functions as parameters, `resolve`and `reject`
+	- `resolve`: sets promise to `fulfilled` state
+ 	- `reject` : sets promise to `rejected` state
+ ```javascript
+     const coinToss = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.5) {
+      resolve('success');
+    } else {
+      reject('error');
+    }
+  }, 10000);
+ }); 
+```
+- Promise object has three functions:
+	- `then`: function called if promise is fulfilled
+ 	- `catch`: function called if promise is rejected
+  	- `finally`: function always called after all processing is complete.
+  ```javascript
+    const coinToss = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.1) {
+      resolve(Math.random() > 0.5 ? 'heads' : 'tails');
+    } else {
+      reject('fell off table');
+    }
+  }, 10000);
+	}); same code as above but adds rejected state 10 percent of time  
+	coinToss
+  .then((result) => console.log(`Coin toss result: ${result}`))
+  .catch((err) => console.log(`Error: ${err}`))
+  .finally(() => console.log('Toss completed'));
+
+	// OUTPUT:
+	//    Coin toss result: tails
+	//    Toss completed  
+	```
+**JavaScript Async/await**  
+- Better for large systems, more concise representation.
+- `await`: keyword that wraps execution of a promise and removes the need to chain functions. Expression will block until the promise state moves to `fulfilled` or throws an exception if state moves to `rejected`  
+- Cannot call `await` unless it is called at top level of the JavaScript, or is in a function defined with `async` keyword.  - `async` transforms the function to return a promise that will resolve to the value previously returned.  
+  - Basically turns any function into an asynchronous function so that it can make asynchronous requests.
+
+- `await` wraps a call to the `async`function, blocks execution until the promise has resolved and returns the promise result.
+
+###Fetch
+- Web 2.0 is fueled by ability to make HTTP requests from JavaScript
+- fetch API is preferred way to make HTTP requests  
+- `fetch` function is built into the browser's JavaScript runtime (can be called from JavaScript code running in a browser)  
+- Basic usage of fetch takes a URL and returns a promise. promise `then` function takes a callback function that is asynchronously called when the requested URL content is obtained.
+- If returned content is of type `application/json` you can use `json` function on response object to convert to a JavaScript object  
+- Example
+- 	```javascript
+   	  fetch('https://api.quotable.io/random')
+  	.then((response) => response.json())
+  	.then((jsonResponse) => {
+   	 console.log(jsonResponse);
+ 	 });
+   	```
+###Express  
+- Everything in express revolves around creating and using http routing and middleware functions.
+- Express application is created by using NPM to install Express package and then call `express` constructor to create the Express application and listen for HTTP requests on desired port.
+- ```javascript
+  const express = require('express');
+  const app = express();
+
+  app.listen(8080);
+  ```
+- HTTP endpoints implemented by defining routes that call function based on HTTP path.
+- `app` object supports all HTTP verbs as functions on the object.
+- ex.
+  ```javascript
+  app.get('/store/provo', (req, res, next) => {
+  	res.send({name: 'provo'});
+  });
+  ```
+- `get` function takes two parameters, URL path matching pattern and callback function to invoke when pattern matches.
+- callback function has three parameters representing HTTP request object(`req`), HTTP response object (`res`), and `next` routing function that Express expects to be called if routing function wants another function to generate a response.
+##Middleware
+- Middleware design pattern has two pieces: mediator and middleware.  
+  	- Middleware represents componentized pieces of functionality.  
+  	- Mediator loads the middleware components and determines order of execution.
+  	- Request reaches mediator then is passed around to the middleware components. 
+	- Express has standard set of middleware functions for routing, authentication, CORS, sessions, serving static web files, cookies, and logging.  
+ - Middleware function looks very similar to routing function.  
+ - `function middlewareName(req, res, next)`
+ - function parameters represent HTTP request object `req` , HTTP response object `res`, `next` middleware function to pass processing to.  
+ - Creating your own middleware:  
+``` javascript
+app.use((req, res, next) => {
+	console.log(req.originalUrl);
+	next();
+});
+```
+- order that middleware is added to Express app object controls order that functions are called.  
+- Any middleware that doesnt call `next` function after processing stops middleware chain from continuing.  
+## Third Party Middleware  
+- Third party functions can be used by using NPM to install pack and including the package in your Javascript with `require` function.  
+- Error Handling Middleware:
+		- Error middleware takes additional `err` parameter that contains the error.
+  ``` javascript
+  function errorMiddlewareName(err, req, res, next)
+  ```
+-  	
+
+
+
+
+
+
+
+  	     
+  	  	   
+  	
+  
+  	     
+  	       	
+  	    	     
+			
+  	  
 	    
 
 	 
