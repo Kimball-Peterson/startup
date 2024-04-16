@@ -30,9 +30,10 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
-    const post = { id: posts.length + 1, title: req.body.title, content: req.body.content };
-    posts.push(post);
-    res.status(201).send(post);
+    const { title, content } = req.body;
+    const newPost = { id: posts.length + 1, title, content }; // Simulate ID assignment
+    posts.push(newPost); // Add the new post to the array
+    res.status(201).json(newPost); // Return the new post as a response
 });
 
 app.put('/posts/:id', (req, res) => {
@@ -55,7 +56,5 @@ app.delete('/posts/:id', (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+
 

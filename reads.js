@@ -3,53 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(posts => {
         const postsContainer = document.querySelector('.reads_p');
+        // Clear existing posts
+        postsContainer.innerHTML = '';
         posts.forEach(post => {
             const postElement = document.createElement('div');
+            postElement.classList.add('reads_tile');
+            postElement.setAttribute('data-tile-id', `tile${post.id}`);
             postElement.innerHTML = `
                 <h3>${post.title}</h3>
                 <p>${post.content}</p>
-                <button onclick="deletePost(${post.id})">Delete</button>
+                <input type="text" id="updateTitle${post.id}" placeholder="New Title">
+                <input type="text" id="updateContent${post.id}" placeholder="New Content">
+                <button onclick="updatePost(${post.id})">Update Post</button>
+                <button onclick="deletePost(${post.id})">Delete Post</button>
             `;
             postsContainer.appendChild(postElement);
         });
     });
 });
 
-function deletePost(id) {
-    fetch(`http://localhost:3000/posts/${id}`, {
-        method: 'DELETE'
-    })
-    .then(() => {
-        console.log('Post deleted');
-        location.reload(); // Reload the page to update the list
-    });
-}
-//post
-document.getElementById('createPost').addEventListener('click', function() {
-    const title = document.getElementById('postTitle').value;
-    const content = document.getElementById('postContent').value;
-
-    fetch('http://localhost:3000/posts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ title: title, content: content })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-        alert('Post created!');
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-});
-
-//put
 function updatePost(postId) {
-    const title = document.getElementById('updateTitle').value;
-    const content = document.getElementById('updateContent').value;
+    const title = document.getElementById(`updateTitle${postId}`).value;
+    const content = document.getElementById(`updateContent${postId}`).value;
 
     fetch(`http://localhost:3000/posts/${postId}`, {
         method: 'PUT',
@@ -68,17 +43,64 @@ function updatePost(postId) {
     });
 }
 
-//delete
 function deletePost(postId) {
-    fetch(`http://localhost:3000/posts/${postId}`, {
-        method: 'DELETE'
+    if (confirm('Are you sure you want to delete this post?')) { // Optional: confirm before deleting
+        fetch(`http://localhost:3000/posts/${postId}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (response.ok) {
+                // Remove the post element from the DOM
+                const postElement = document.querySelector(`div[data-tile-id='tile${postId}']`);
+                if (postElement) {
+                    postElement.remove();
+                }
+                alert('Post deleted successfully!');
+            } else {
+                alert('Failed to delete the post.');
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Error deleting the post.');
+        });
+    }
+}
+
+document.getElementById('createPost').addEventListener('click', function() {
+    const title = document.getElementById('postTitle').value;
+    const content = document.getElementById('postContent').value;
+
+    fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title: title, content: content })
     })
-    .then(() => {
-        console.log('Post deleted');
-        alert('Post deleted successfully!');
+    .then(response => response.json())
+    .then(post => {
+        console.log('Success:', post);
+        displayPost(post); // Function to add the post to the DOM
+        document.getElementById('postTitle').value = ''; // Clear the title input field
+        document.getElementById('postContent').value = ''; // Clear the content input field
     })
     .catch((error) => {
         console.error('Error:', error);
+        alert('Failed to create post');
     });
-}
+});
 
+function displayPost(post) {
+    const postsContainer = document.querySelector('.reads_p');
+    const postElement = document.createElement('div');
+    postElement.classList.add('reads_tile');
+    postElement.setAttribute('data-tile-id', `tile${post.id}`);
+    postElement.innerHTML = `
+        <h3>${post.title}</h3>
+        <p>${post.content}</p>
+        <button onclick="updatePost(${post.id})">Update Post</button>
+        <button onclick="deletePost(${post.id})">Delete Post</button>
+    `;
+    postsContainer.appendChild(postElement);
+}
