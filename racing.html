@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Speed Sales</title>
+</head>
+
+<body>
+    <hr>
+    <h1>Speed Sales</h1>
+    <hr>
+    <nav>
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./reads.html">Reads</a></li>
+            <li class="nav-item"><a class="nav-link" href="./media.html">Media</a></li>
+            <li class="nav-item"><a class="nav-link" href="./classifieds.html">Classifieds</a></li>
+            <li class="nav-item"><a class="nav-link" href="./racing.html">Racing</a></li>
+        </ul>
+    </nav>
+    <hr>
+    
+    <div class="_title">
+        <h2>Racing</h2>
+    </div>
+    <div class="racingAPIcall">
+        <h3>Live Race Updates</h3>
+        <ul id="raceUpdates"></ul>
+        <div>
+            <h4 id="raceName">Race Round:</h4>
+        </div>
+        <div class="standingsAPIcall">
+            <h4>Current Season Standings</h4>
+            <ul id="standingsList"></ul>
+        </div>
+        
+        <label for="intervalControl">Update Interval (seconds):</label>
+        <input type="number" id="intervalControl" value="300" onchange="adjustInterval(this.value)">
+    </div>
+    <script src="racing.js"></script>
+
+    <footer>
+        <h3>Reads</h3>
+        <div>3rd Party Social Media Buttons</div>
+        <div class="row">
+            <div class="column">
+                <a href="mailto:SpeedSales@gmail.com">Contact Us</a>
+            </div>
+            <div class="column2">
+                <a href="https://github.com/Kimball-Peterson/startup.git">Github link</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
