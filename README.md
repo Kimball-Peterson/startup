@@ -66,10 +66,10 @@ Properly styled CSS - Dark colors, new fonts, better spacing, separation added.
 
 ### Startup Service  
 Backend web service support and interaction  
-40% - Create an HTTP service using Node.js and Express  
-10% - Frontend served up using Express static middleware  
-10% - Your frontend calls third party service endpoints  
-20% - Your backend provides service endpoints  
-20% - Your frontend calls your service endpoints  
+40% - Create an HTTP service using Node.js and Express - Server.js file imports Express and sets up HTTP server on 3000.  
+10% - Frontend served up using Express static middleware - app.use(express.static(--dirname)); to serve static files.  
+10% - Your frontend calls third party service endpoints - Race round and season standings from external open source f1 api.  
+20% - Your backend provides service endpoints - Endpoints for GET, POST, DELETE methods for CRUD operations on post data.  
+20% - Your frontend calls your service endpoints - Reads.js contains calls to service endpoints to fetch, update, create and delete posts.
   
 
