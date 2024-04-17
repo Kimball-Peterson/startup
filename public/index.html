@@ -17,18 +17,29 @@
   <hr>
   <h1>Speed Sales</h1>
   <hr>
+  <div class="form-container">
   <div class="login_form">
-    <div>
-    Username: <input type="text" id="username" />
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="button" onclick="login()">Login</button>
+    </form>
   </div>
-  <div> 
-    Password: <input type="password" id="password" />
-    </div>
-    <div>
-    <button onclick="login()">Login</button>
+
+  <!-- Registration Form -->
+  <div class="register_form">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" required>
+        <label for="newPassword">Password:</label>
+        <input type="password" id="newPassword" required>
+        <button type="button" onclick="register()">Register</button>
+    </form>
   </div>
-    <div id="loginMessage"></div>
-    <div id="usernameDisplay"></div>
 </div>
   <hr>
   <nav> 
@@ -66,8 +77,8 @@
     <div id="caption"></div>
   </div>
   <script src="lightbox_index.js"></script>
-  <script src="login.js"></script>
   <script src="notification.js"></script>
+  <script src="login.js"></script>
   <div id="notification" style="display:none;"></div>
 
   </body>
@@ -84,6 +95,6 @@
           <a href="https://github.com/Kimball-Peterson/startup.git">Github link</a>
         </div>
       </div>
-      <div class
+   
 
 

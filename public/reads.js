@@ -44,13 +44,13 @@ function updatePost(postId) {
 }
 
 function deletePost(postId) {
-    if (confirm('Are you sure you want to delete this post?')) { // Optional: confirm before deleting
+    if (confirm('Are you sure you want to delete this post?')) { 
         fetch(`http://localhost:3000/posts/${postId}`, {
             method: 'DELETE'
         })
         .then(response => {
             if (response.ok) {
-                // Remove the post element from the DOM
+                
                 const postElement = document.querySelector(`div[data-tile-id='tile${postId}']`);
                 if (postElement) {
                     postElement.remove();
@@ -81,9 +81,9 @@ document.getElementById('createPost').addEventListener('click', function() {
     .then(response => response.json())
     .then(post => {
         console.log('Success:', post);
-        displayPost(post); // Function to add the post to the DOM
-        document.getElementById('postTitle').value = ''; // Clear the title input field
-        document.getElementById('postContent').value = ''; // Clear the content input field
+        displayPost(post); 
+        document.getElementById('postTitle').value = ''; 
+        document.getElementById('postContent').value = ''; 
     })
     .catch((error) => {
         console.error('Error:', error);

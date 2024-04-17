@@ -291,3 +291,18 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+
+.forms-container {
+  display: flex;  /* Enables Flexbox */
+  justify-content: center; /* Center the forms horizontally in the container */
+  align-items: center; /* Center the forms vertically in the container */
+  height: 100vh; /* Take full viewport height */
+}
+
+.login_form, .register_form {
+  width: 300px; /* Give each form a width */
+  margin: 10px; /* Space between the forms */
+  padding: 20px; /* Padding inside the forms */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds shadow for depth */
+}
